@@ -1,6 +1,38 @@
-<% @mylistings.each do |listing| %>
 
-  <%= listing.title %>
-  <%= listing.description %>
+<h1 class="title is-1">My properties</h1>
 
+
+  <div>
+  <a >
+    <%= button_to "New Listing", { action: "new" }, method: :get, class: "button is-link is-large is-fullwidth"%>
+  </a>
+  </div>
+
+
+<div class="container is-centered listing-list columns is-multiline">
+  <% @mylistings.each do |listing| %>
+
+      <div class="card column is-narrow listing">
+
+        <div class="card-image">
+            <figure class="image is-4by3">
+
+              <% if listing.picture.attached? %>
+                  <image src="<%=(url_for(listing.picture))%>">
+              <% else %>
+              <%= image_tag ('placeholder.jpg') %>
+              <% end %>
+            </figure>
+        </div>
+
+        <div class="card-content">
+            <h2 class="title">
+              <span class="listing-title"><%= link_to listing.title, listing_path(listing) %></span>
+              <span class="listing-expand-button">[+]</span>
+            </h2>
+            <p hidden class="content listing-description"> <%= listing.description %> </p>
+        </div>
+
+      </div>
   <% end %>
+</div>

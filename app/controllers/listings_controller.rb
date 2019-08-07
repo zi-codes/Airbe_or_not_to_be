@@ -6,7 +6,8 @@ class ListingsController < ApplicationController
   end
 
   def myproperties
-    @mylistings = Listing.where(user_id: session[:id])
+
+    @mylistings = Listing.where(user_id: session[:user_id])
 
   end
 
@@ -18,7 +19,9 @@ class ListingsController < ApplicationController
   end
 
   def new
+    redirect_to '/login' if !session[:user_id]
     @listing = Listing.new
+    @user_id = session[user_id]
   end
 
   def create

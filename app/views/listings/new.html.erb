@@ -80,16 +80,28 @@
         </div>
       </div>
 
-      <div class="field">
-        <p class="control">
-          <%= form.date_field :from_date, class: 'input', id:'datepicker' %>
-        </p>
+      <label class="label">Available dates</label>
+      <div class="field is-horizontal">
+        <div class="field-body">
+
+          <div class="field">
+            <p class="control">
+              <%= form.date_field :from_date, class: 'input', id:'datepicker' %>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control">
+              <%= form.date_field :to_date, class: 'input', id:'datepicker' %>
+            </p>
+          </div>
+        </div>
       </div>
 
+
+      <%= form.label "Picture", class: "label" %>
       <div class="field">
-        <p class="control">
-          <%= form.date_field :to_date, class: 'input', id:'datepicker' %>
-        </p>
+        <%= form.file_field :picture, class: "control" %>
       </div>
 
       <div class="field">
@@ -98,16 +110,10 @@
           </p>
       </div>
 
-    <%= form.label "Picture" %>
-    <%= form.file_field :picture %><br>
-      <%end%>
+
+
+        <%end%>
 
     </div>
   </div>
 </div>
-
-<script>
-  var foopicker = new FooPicker({
-    id: 'datepicker'
-  });
-</script>
