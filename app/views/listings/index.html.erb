@@ -21,9 +21,8 @@
               <% if listing.picture.attached? %>
                   <image src="<%=(url_for(listing.picture))%>">
               <% else %>
-              <img src="https://pixabay.com/get/57e8dd454c50ac14f6da8c7dda6d49214b6ac3e45657754e712c7bd296/log-cabin-1886620_1280.jpg" alt="Placeholder image">
+              <%= image_tag ('placeholder.jpg') %>
               <% end %>
-              <!-- <img src="https://pixabay.com/get/57e8dd454c50ac14f6da8c7dda6d49214b6ac3e45657754e712c7bd296/log-cabin-1886620_1280.jpg" alt="Placeholder image"> -->
             </figure>
         </div>
 
@@ -40,7 +39,7 @@
   <% end %>
 </div>
 
-<h1> unavailable properties</h1>
+<h1 class="title is-1"> Unavailable properties</h1>
 <div class="container listing-list">
 
   <% @listings.each do |listing| %>
