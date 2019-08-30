@@ -1,24 +1,31 @@
-# README
+# AirB-or-not-to-B
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An AirBnB clone made for a one week Makers group project. After just 6 weeks of learning to code we taught ourselves how to use Rails and built a full stack web app, complete with database and some seriously sweet CSS.
 
-Things you may want to cover:
+[Visit the live production website here!] (https://airb-or-not-to-b.herokuapp.com/)
 
-* Ruby version
+## Run it yourself
 
-* System dependencies
+#### Mac OS
+Requires Ruby and Bundler
 
-* Configuration
+```sh
+$ git clone https://github.com/zi-codes/Airbe_or_not_to_be/
+$ cd Airbe-or-not-to-be
+$ bundle
+$ rake db:create
+$ rake db:migrate
+$ rails s
+```
 
-* Database creation
+In your favourite browser navigate to localhost:3000 and have fun :)
 
-* Database initialization
+## User stories implemented
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Any signed-up user can list a new space.
+- Users can list multiple spaces.
+- Users should be able to name their space, provide a short description of the space, and a price per night.
+- Users should be able to offer a range of dates where their space is available.
+- Any signed-up user can request to hire any space for one night, and this should be approved by the user that owns that space.
+- Nights for which a space has already been booked should not be available for users to book that space.
+Until a user has confirmed a booking request, that space can still be booked for that night.
