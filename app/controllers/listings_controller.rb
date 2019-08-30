@@ -21,7 +21,7 @@ class ListingsController < ApplicationController
   def new
     redirect_to '/login' if !session[:user_id]
     @listing = Listing.new
-    @user_id = session[user_id]
+    @user_id = session[:user_id]
   end
 
   def create
