@@ -2,7 +2,7 @@
 
 An AirBnB clone made for a one week Makers group project. After just 6 weeks of learning to code we taught ourselves how to use Rails and built a full stack web app, complete with database and some seriously sweet CSS.
 
-[Visit the live production website here!] (https://airb-or-not-to-b.herokuapp.com/)
+[Visit the live production website here!](https://airb-or-not-to-b.herokuapp.com/)
 
 ## Run it yourself
 
